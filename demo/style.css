@@ -1,0 +1,86 @@
+/* Basic styling */
+/* * {margin: 0; padding: 0; border: 0; vertical-align: baseline;} */
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+body {margin: 0;}
+
+
+#titlebar {
+    height: 2.5em;
+    display: block;
+    position: relative;
+    background-color: grey;
+    width: 100%;
+    user-select: none;
+    padding: 3px;
+    padding-bottom: 0;
+}
+
+#drag-region {
+    -webkit-app-region: drag;
+    width: 100%;
+    height: 100%;
+    margin-top: 0.5em;
+}
+
+#drag-region div {
+    display: inline-block;
+    position: absolute;
+}
+
+#window-controls-left {
+    left: 20px;
+}
+
+.maximized #maximize-button {
+    display: none;
+}
+
+#minimize-button svg:hover {
+    background-color: lawngreen;
+}
+
+#maximize-button svg:hover {
+    background-color: khaki;
+}
+
+#restore-button svg:hover {
+    background-color: indigo;
+}
+
+#close-button svg:hover {
+    background-color: red;
+}
+
+#restore-button {
+    display: none;
+}
+
+.maximized #restore-button {
+    display: inline;
+}
+
+#title {
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    /* Since the element expands completely to the left over the window buttons,
+    need to add this option so the user can select the window buttons */
+    pointer-events: none;
+}
+
+#window-controls-right {
+    right: 20px;
+}
+
+.window-controls span {
+    -webkit-app-region: no-drag;
+}
+
+.window-controls svg:hover {
+    transition: 0.25s;
+}
+
+.window-controls svg path {
+    fill: black;
+}
