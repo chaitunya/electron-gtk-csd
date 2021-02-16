@@ -9,3 +9,5 @@ To test it out:
 npm install
 npm run-script demo
 ```
+
+![Demo screencast](demo/demo.gif)
